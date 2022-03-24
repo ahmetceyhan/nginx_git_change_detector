@@ -7,7 +7,7 @@ Eğer rinetd.conf konfigürasyonunda değişiklik olmuş ise 'systemctl reload r
 Eğer stream.conf konfigürasyonunda değişiklik olmuş ise 'sudo systemctl reload nginx' otomatik çalışıp değişikliği yansıtmaktadır.
 
 Temal mekanizması şu şekilde işlemektedir:
-Bitbucket reposundan pull aldıktan sonra 60.85 makinasında '/etc/nginx/modules-available/stream.conf' dosyası ile 
+Bitbucket reposundan pull aldıktan sonra "xx.xx.xx.xx" makinasında '/etc/nginx/modules-available/stream.conf' dosyası ile 
 repository den gelen 'stream.conf' kıyaslanır ve değişiklik olmuş mu diye bakılır. Eğer repository de değişiklik olmuş ise
 yeni 'stream.conf' dosyası '/etc/nginx/modules-available/stream.conf' üzerine yazılır. 
 Aynı senaryo 'rinetd.conf' için de geçerlidir. 
@@ -25,3 +25,7 @@ Kurulum adımları olarak izlenen yol:
 5) Super user a geçiş yaptıktan sonra 'chmod +x configuration_refresh.sh' ile çalıştırma izni verilir.
 6) 'nohup ./configuration_refresh.sh &' komutu ile arka planda çalıştırılır.
 7) 'ps aux' komutu ile arka planda çalıştığı gözlemlenebilir.
+
+
+
+olası pull hatalarında git revert için: 'git reset && git checkout .'
