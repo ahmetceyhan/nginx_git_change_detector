@@ -23,8 +23,8 @@ Kurulum adımları olarak izlenen yol:
 4) Otomatik pull alırken username ve password sormaması için bu komut çalıştırılır: 'git config --global credential.helper store'. 
    Böylece ilk pull alırken girilen git kullanıcı bilgileri kaydedilmiş olur.
 5) Super user a geçiş yaptıktan sonra 'chmod +x configuration_refresh.sh' ile çalıştırma izni verilir.
-6) 'nohup ./configuration_refresh.sh &' komutu ile arka planda çalıştırılır.
-7) 'ps aux' komutu ile arka planda çalıştığı gözlemlenebilir.
+6) 'nohup ./configuration_refresh.sh &' komutu ile arka planda çalıştırılır. ('nohup bash ./configuration_refresh.sh &' ile izin vermeden de çalıştırılabilir)
+7) 'ps aux | grep configuration_refresh' komutu ile arka planda çalıştığı gözlemlenebilir.
 
 
 
