@@ -26,6 +26,6 @@ Kurulum adımları olarak izlenen yol:
 6) 'nohup ./configuration_refresh.sh &' komutu ile arka planda çalıştırılır. ('nohup bash ./configuration_refresh.sh &' ile izin vermeden de çalıştırılabilir)
 7) 'ps aux | grep configuration_refresh' komutu ile arka planda çalıştığı gözlemlenebilir.
 
-
+tail -f /proc/PID_ID/fd/1 ile konsol çıktısı izlenebilir.
 
 olası pull hatalarında git revert için: 'git reset && git checkout .'
