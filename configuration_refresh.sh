@@ -34,7 +34,7 @@ stream_conf_refresh() {
 
 while true; do
 
-	git pull
+        git reset && git checkout . && git pull
 	stream_conf_refresh
 	rinetd_conf_refresh
 
